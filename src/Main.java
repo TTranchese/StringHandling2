@@ -3,11 +3,13 @@ public class Main {
 		String string1 = "United Kingdom";
 		String string2 = "Germany";
 
-		String sub1 = string1.substring(0,6);
-		String sub2 = string1.substring(7);
+		int spaceIndex = string1.indexOf(" ");
+		String sub1 = string1.substring(0, spaceIndex);
+		String sub2 = string1.substring(spaceIndex+1);
 
-		String charArray = (sub1+ " " + string2+ " " + sub2).toUpperCase();
+		char[] charArray = (sub1 + " " + string2 + " " + sub2).toUpperCase().toCharArray();
 
+		// Print the char array
 		System.out.println(charArray);
 	}
 }
